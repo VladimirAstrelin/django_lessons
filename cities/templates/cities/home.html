@@ -1,9 +1,12 @@
 {% extends "base.html" %}
-{% block title %}Home Page{% endblock %}
+{% block title %}Города{% endblock %}
 {% block content %}
-<div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
-    <h1 class="display-4">Hello, {{surname}}!</h1>
-    {% now "jS F Y H:i" %}
-    <p class="lead">Это уроки по Django 2.1.4</p>
-  </div> 
+<h1 class="display-4">Города</h1>
+<div class="row">
+  <div class="col-md-6">
+    {% for object in objects_list %}
+      <p>{{object.name}}</p>
+    {% endfor %}
+  </div>
+</div>
 {% endblock %}
